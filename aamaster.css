@@ -2,3 +2,29 @@
 /* Color 01: #D7C8E8 */
 /* Color 02: #C8E8DF */
 body {background-color: #D7C8E8;}
+
+.gradient-square {
+  width: 170px;
+  height: 210px;
+  /* Define colors and oversized background size */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  /* Apply infinite smooth animation */
+  animation: gradient-shift 15s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.vignette-edge {
+  float: center;
+  margin-left: 5px;
+  margin-top: 5px;
+
+  border-radius:10px;
+  -webkit-mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, black 50%, transparent 80%);
+  mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, black 50%, transparent 80%);
+}
